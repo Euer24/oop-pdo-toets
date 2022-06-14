@@ -6,21 +6,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $db = new Database();
     $db->query("INSERT INTO `country` (`id`,
-                                        `country`,
-                                        `capital`,
-                                        `continent`,
-                                        `population`)
+                                        `brand`,
+                                        `model`,
+                                        `topspeed`,
+                                        `price`)
                 VALUES                 (:id,
-                                        :country,
-                                        :capital,
-                                        :continent,
-                                        :population)");
+                                        :brand,
+                                        :model,
+                                        :topspeed,
+                                        :price)");
 
     $db->bind(":id", null, PDO::PARAM_INT);
-    $db->bind(":country", $_POST["country"], PDO::PARAM_STR);
-    $db->bind(":capital", $_POST["capital"], PDO::PARAM_STR);
-    $db->bind(":continent", $_POST["continent"], PDO::PARAM_STR);
-    $db->bind(":population", $_POST["population"], PDO::PARAM_INT);
+    $db->bind(":brand", $_POST["brand"], PDO::PARAM_STR);
+    $db->bind(":model", $_POST["model"], PDO::PARAM_STR);
+    $db->bind(":topspeed", $_POST["topspeed"], PDO::PARAM_STR);
+    $db->bind(":price", $_POST["price"], PDO::PARAM_INT);
 
     $db->execute();
 

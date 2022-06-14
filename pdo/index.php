@@ -1,4 +1,4 @@
-<a href="./create.php">Land Toevoegen</a>
+<a href="./create.php">Nieuwe Record</a>
 
 <?php
 /**
@@ -19,10 +19,10 @@ foreach($country as $key => $value)
 {
     $tbody .= "<tr>
               <td>" . $value->id  . "</td>
-              <td>" . $value->country . "</td>
-              <td>" . $value->capital . "</td>
-              <td>" . $value->continent . "</td>
-              <td>" . $value->population . "</td>
+              <td>" . $value->brand . "</td>
+              <td>" . $value->model . "</td>
+              <td>" . $value->topspeed . "</td>
+              <td>" . $value->price . "</td>
               </tr>";
 }
 
@@ -32,10 +32,10 @@ foreach($country as $key => $value)
     <thead>
         <tr>
             <th>id</th>
-            <th>country</th>
-            <th>capital</th>
-            <th>continent</th>    
-            <th>population</th>
+            <th>brand</th>
+            <th>model</th>
+            <th>topspeed</th>    
+            <th>price</th>
         </tr>
     </thead>
     <tbody>
