@@ -1,3 +1,5 @@
+<h1>De vijf duurste auto's ter wereld </1h> <br>
+
 <a href="./create.php">Nieuwe Record</a>
 
 <?php
@@ -18,7 +20,6 @@ $tbody = "";
 foreach($vehicle as $key => $value)
 {
     $tbody .= "<tr>
-              <td>" . $value->id  . "</td>
               <td>" . $value->brand . "</td>
               <td>" . $value->model . "</td>
               <td>" . $value->topspeed . "</td>
@@ -31,11 +32,11 @@ foreach($vehicle as $key => $value)
 <table>
     <thead>
         <tr>
-            <th>id</th>
-            <th>brand</th>
+            <th></th>
+            <th>Merk</th>
             <th>model</th>
-            <th>topspeed</th>    
-            <th>price</th>
+            <th>Topsnelheid</th>    
+            <th>prijs</th>
         </tr>
     </thead>
     <tbody>
